@@ -1,13 +1,13 @@
 #Common headers
-common_includes := hardware/qcom/display/libgralloc
-common_includes += hardware/qcom/display/liboverlay
-common_includes += hardware/qcom/display/libcopybit
-common_includes += hardware/qcom/display/libqdutils
-common_includes += hardware/qcom/display/libhwcomposer
-common_includes += hardware/qcom/display/libexternal
-common_includes += hardware/qcom/display/libqservice
-common_includes += hardware/qcom/display/libvirtual
-common_includes += hardware/qcom/display/libhdmi
+common_includes := hardware/qcom/display-caf-msm8226/libgralloc
+common_includes += hardware/qcom/display-caf-msm8226/liboverlay
+common_includes += hardware/qcom/display-caf-msm8226/libcopybit
+common_includes += hardware/qcom/display-caf-msm8226/libqdutils
+common_includes += hardware/qcom/display-caf-msm8226/libhwcomposer
+common_includes += hardware/qcom/display-caf-msm8226/libexternal
+common_includes += hardware/qcom/display-caf-msm8226/libqservice
+common_includes += hardware/qcom/display-caf-msm8226/libvirtual
+common_includes += hardware/qcom/display-caf-msm8226/libhdmi
 
 ifeq ($(TARGET_USES_POST_PROCESSING),true)
     common_flags     += -DUSES_POST_PROCESSING
@@ -21,7 +21,7 @@ common_libs := liblog libutils libcutils libhardware
 
 #Common C flags
 common_flags := -DDEBUG_CALC_FPS -Wno-missing-field-initializers
-common_flags += -Werror -Wno-error=unused-parameter 
+common_flags += -Werror -Wno-error=unused-parameter
 
 ifeq ($(ARCH_ARM_HAVE_NEON),true)
     common_flags += -D__ARM_HAVE_NEON
